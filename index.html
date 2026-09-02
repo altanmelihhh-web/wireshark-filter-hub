@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireshark Hub — Network Security Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ───────── SIDEBAR ───────── -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h1>Wireshark Hub</h1>
+      <div class="subtitle">v2.0 · Fintech Reference</div>
+    </div>
+
+    <div class="sidebar-search">
+      <input type="text" id="search" placeholder="Ara: filtre, senaryo...  (/ tuşu)" autocomplete="off">
+      <div style="font-size:10px;color:var(--text-2);margin-top:6px;cursor:pointer;" onclick="showShortcutHelp()">⌨ Kısayollar (? tuşu)</div>
+    </div>
+
+    <ul class="nav-list">
+      <li><a data-section="dashboard" class="active"><span class="icon">⬢</span> Dashboard</a></li>
+      <li style="padding:8px 16px 4px;font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-2);">Araçlar</li>
+      <li><a data-section="builder"><span class="icon">🔧</span> Filter Builder</a></li>
+      <li><a data-section="wizard"><span class="icon">🧭</span> Sorun Sihirbazı</a></li>
+      <li><a data-section="follow"><span class="icon">👁</span> Trafik Takibi</a></li>
+      <li><a data-section="tsharkbuilder"><span class="icon">⌨</span> tshark Builder</a></li>
+      <li><a data-section="pcapbuilder"><span class="icon">📡</span> PCAP Komutu</a></li>
+      <li><a data-section="checklist"><span class="icon">✓</span> Kontrol Listesi</a></li>
+      <li><a data-section="encyclopedia"><span class="icon">📖</span> Paket Sözlüğü</a></li>
+      <li><a data-section="handshake"><span class="icon">🤝</span> Handshake Teşhis</a></li>
+      <li><a data-section="profilebuilder"><span class="icon">🎨</span> Profil Oluşturucu</a></li>
+      <li style="padding:8px 16px 4px;font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-2);">Referans</li>
+      <li><a data-section="filters"><span class="icon">⚙</span> Filtre Kütüphanesi</a></li>
+      <li><a data-section="scenarios"><span class="icon">⚠</span> Sorun Senaryoları</a></li>
+      <li style="padding:8px 16px 4px;font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-2);">Platform</li>
+      <li><a data-section="f5tls"><span class="icon">🔒</span> F5 &amp; TLS</a></li>
+      <li><a data-section="fortigate"><span class="icon">🛡</span> FortiGate</a></li>
+      <li><a data-section="checkpoint"><span class="icon">⬡</span> Check Point</a></li>
+      <li style="padding:8px 16px 4px;font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-2);">Kütüphane</li>
+      <li><a data-section="profiles"><span class="icon">📦</span> Hazır Profiller</a></li>
+      <li><a data-section="cheatsheets"><span class="icon">📄</span> Cheat Sheets</a></li>
+      <li><a data-section="ecosystem"><span class="icon">🌐</span> Ekosistem</a></li>
+      <li><a data-section="lua"><span class="icon">🔌</span> Lua Plugins</a></li>
+      <li><a data-section="statistics"><span class="icon">📊</span> Statistics</a></li>
+      <li><a data-section="rootcause"><span class="icon">🎯</span> Root Cause</a></li>
+      <li><a data-section="tshark"><span class="icon">⌨</span> tshark CLI</a></li>
+      <li><a data-section="github"><span class="icon">⎇</span> GitHub Katalogu</a></li>
+      <li><a data-section="wca"><span class="icon">🎓</span> WCA-101</a></li>
+    </ul>
+  </aside>
+
+  <!-- ───────── MAIN ───────── -->
+  <main id="main">
+
+    <!-- ─── DASHBOARD ─── -->
+    <section class="section active" id="dashboard"></section>
+
+    <!-- ─── FILTER BUILDER ─── -->
+    <section class="section" id="builder"></section>
+
+    <!-- ─── WIZARD ─── -->
+    <section class="section" id="wizard"></section>
+
+    <!-- ─── FOLLOW TRAFFIC ─── -->
+    <section class="section" id="follow"></section>
+
+    <!-- ─── TSHARK BUILDER ─── -->
+    <section class="section" id="tsharkbuilder"></section>
+
+    <!-- ─── PCAP BUILDER ─── -->
+    <section class="section" id="pcapbuilder"></section>
+
+    <!-- ─── CHECKLIST ─── -->
+    <section class="section" id="checklist"></section>
+
+    <!-- ─── ENCYCLOPEDIA ─── -->
+    <section class="section" id="encyclopedia"></section>
+
+    <!-- ─── HANDSHAKE DIAGNOSTIC ─── -->
+    <section class="section" id="handshake"></section>
+
+    <!-- ─── PROFILE BUILDER ─── -->
+    <section class="section" id="profilebuilder"></section>
+
+    <!-- ─── FILTRELER ─── -->
+    <section class="section" id="filters"></section>
+
+    <!-- ─── SENARYOLAR ─── -->
+    <section class="section" id="scenarios"></section>
+
+    <!-- ─── F5 & TLS ─── -->
+    <section class="section" id="f5tls"></section>
+
+    <!-- ─── FORTIGATE ─── -->
+    <section class="section" id="fortigate"></section>
+
+    <!-- ─── CHECK POINT ─── -->
+    <section class="section" id="checkpoint"></section>
+
+    <!-- ─── PROFİLLER ─── -->
+    <section class="section" id="profiles"></section>
+
+    <!-- ─── CHEAT SHEETS ─── -->
+    <section class="section" id="cheatsheets"></section>
+
+    <!-- ─── EKOSİSTEM ─── -->
+    <section class="section" id="ecosystem"></section>
+
+    <!-- ─── LUA PLUGINS ─── -->
+    <section class="section" id="lua"></section>
+
+    <!-- ─── STATISTICS ─── -->
+    <section class="section" id="statistics"></section>
+
+    <!-- ─── ROOT CAUSE ─── -->
+    <section class="section" id="rootcause"></section>
+
+    <!-- ─── TSHARK ─── -->
+    <section class="section" id="tshark"></section>
+
+    <!-- ─── GITHUB ─── -->
+    <section class="section" id="github"></section>
+
+    <!-- ─── WCA ─── -->
+    <section class="section" id="wca"></section>
+
+  </main>
+
+  <!-- ───────── TOAST ───────── -->
+  <div id="toast">Kopyalandı</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
