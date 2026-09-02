@@ -4784,7 +4784,7 @@ function renderDashboard() {
   el.innerHTML = `
     <div class="hero">
       <h2>Wireshark Hub</h2>
-      <div class="lead">Fintech Network Security Engineer için referans merkezi — filtreler, senaryolar, araçlar, metodolojiler.</div>
+      <div class="lead">Network security mühendisleri için referans merkezi — filtreler, senaryolar, araçlar, metodolojiler.</div>
       <div class="stats-grid">
         <div class="stat-card"><div class="num">${FILTERS.length}</div><div class="label">Filtre</div></div>
         <div class="stat-card"><div class="num">${SCENARIOS.length}</div><div class="label">Senaryo</div></div>
