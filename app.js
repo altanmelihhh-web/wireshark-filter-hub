@@ -4,6 +4,19 @@
    ═══════════════════════════════════════════════════════════════ */
 
 /* ───────── DATA: FILTERS (400+) ───────── */
+// Multi-term search: every whitespace-separated term must appear somewhere in
+// the entry's command, description or category. A single term behaves exactly
+// as before, so "ssl" is unchanged, while "ssl profile" now matches
+// "list ltm profile client-ssl" — previously it matched nothing, because the
+// whole query had to occur as one contiguous substring.
+function matchesQuery(item, query) {
+  var hay = ((item.code || "") + " " + (item.desc || "") + " " + (item.cat || "")).toLowerCase();
+  var terms = String(query == null ? "" : query).toLowerCase().split(/\s+/).filter(Boolean);
+  if (!terms.length) return false;
+  for (var i = 0; i < terms.length; i++) if (hay.indexOf(terms[i]) === -1) return false;
+  return true;
+}
+
 const FILTERS = [
   // ═════════════════════ PORT ═════════════════════
   { cat: "Port", code: "tcp.port == 443", desc: "TCP 443 (iki yön) — HTTPS trafiği", sev: "i" },
@@ -4908,9 +4921,7 @@ function renderFilterRows() {
   if (filterSectionSearch) {
     const q = filterSectionSearch.toLowerCase();
     rows = FILTERS.filter(f =>
-      f.code.toLowerCase().includes(q) ||
-      f.desc.toLowerCase().includes(q) ||
-      f.cat.toLowerCase().includes(q)
+      matchesQuery(f, q)
     );
     if (countEl) countEl.textContent = `${rows.length} sonuç bulundu "${filterSectionSearch}" için`;
   } else {
@@ -5581,9 +5592,7 @@ function handleSearch(q) {
   if (!tbody) return;
 
   const matches = FILTERS.filter(f =>
-    f.code.toLowerCase().includes(q) ||
-    f.desc.toLowerCase().includes(q) ||
-    f.cat.toLowerCase().includes(q)
+    matchesQuery(f, q)
   );
 
   tbody.innerHTML = matches.length ? matches.map(f => `
