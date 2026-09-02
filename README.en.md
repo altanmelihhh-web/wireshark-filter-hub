@@ -12,8 +12,10 @@ it, so it hands you something runnable instead of a page to skim.
 
 | | |
 |---|---|
-| Entries | 639 |
+| Filters | 490 |
 | Categories | 23 |
+| Scenarios | 5 |
+| Cheat sheets | 21 |
 | Dependencies | none — single page, entirely client-side |
 | Network calls | none |
 

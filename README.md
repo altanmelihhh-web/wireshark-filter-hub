@@ -13,8 +13,10 @@ doğrudan çalıştırılabilir olanı verir.
 
 | | |
 |---|---|
-| Kayıt | 639 |
+| Filtre | 490 |
 | Kategori | 23 |
+| Senaryo | 5 |
+| Cheat sheet | 21 |
 | Bağımlılık | yok — tek sayfa, tamamen istemci tarafında |
 | Ağ çağrısı | yok |
 
